@@ -5,12 +5,11 @@ PS interplation (psinterp) is an open-source package for Interferometric Synthet
 This is research code provided to you "as is" with NO WARRANTIES OF CORRECTNESS. Use at your own risk.
 
 ## Installation
-PSPS requires Python3.6+ to run.
-Clone to build/install
+A C++ compiler is required to install the package.
+psinterp requires python3.6+ to run.
 ```
-git clone git@github.com:UT-Radar-Interferometry-Group/psinterp.git
+git clone https://github.com/UT-Radar-Interferometry-Group/psinterp.git
 cd psinterp
-git submodule update --init --recursive
 pip install -e .
 ```
 ## Command Line Tool
@@ -41,6 +40,6 @@ positional arguments:
 Read the Sentinel-1 interferogram (January 15, 2018 - November 06, 2019) and the PS location file, perform the interpolation and store the interpolated interferogram to interp.int 
 
 $ cd test
-$ psinterp --outputfie interp.int 20180115_20191106.int psfile 600 600
+$ psinterp --outputfile interp.int 20180115_20191106.int psfile 600 600
 ```
 
