@@ -1,3 +1,8 @@
 *.egg-info
 *.o
 *.so
+__pycache__
+
+# Data files
+*.int
+
