@@ -1,5 +1,5 @@
 import os
-import sys
+import numpy as np
 from psinterp import cppinterp
 
 def interpf(ifgfile,
@@ -48,6 +48,12 @@ def interpf(ifgfile,
     """
     if outputfile is None:
         outputfile = os.path.split(ifgfile)[-1]+'.interp'
+
+    if not os.path.exists(ifgfile):
+        raise FileNotFoundError("Cannot find file: {}".format(ifgfile))
+    if not os.path.exists(psfile):
+        raise FileNotFoundError("Cannot find file: {}".format(psfile))
+
     cppinterp.interp(ifgfile,psfile,outputfile,
                      int(nrow),int(ncol),int(N),int(rdmax),float(alpha))
 
@@ -91,4 +97,3 @@ def interp(ifg,
     ifg_interp = cppinterp.interp_(ifg,ps,N,rdmax,alpha)
     ifg_interp = np.array(ifg_interp)
     return ifg_interp
-
