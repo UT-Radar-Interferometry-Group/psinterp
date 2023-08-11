@@ -1,6 +1,6 @@
 # psinterp
 ## _Phase interpolation between PS pixels_
-PS interplation (psinterp) is an open-source package for Interferometric Synthetic Aperture Radar (InSAR) phase reconstruction. It reads a wrapped interferogram and a set of PS pixels, and produces an interpolated interferogram by interpolate InSAR phases between PS pixels.
+PS interplation (psinterp) is an open-source package for Interferometric Synthetic Aperture Radar (InSAR) phase reconstruction. It reads a wrapped interferogram and a set of PS pixels, and produces an interpolated interferogram by interpolating InSAR phases between PS pixels.
 
 This is research code provided to you "as is" with NO WARRANTIES OF CORRECTNESS. Use at your own risk.
 
